@@ -17,5 +17,5 @@ class Person:
 
 
 bob = Person(name="Bob", profession="developer", salary="200$")
-x = str(bob)
+x = str(bob.name)
 print(x)
