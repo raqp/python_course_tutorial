@@ -13,3 +13,6 @@ def my_function():
 
 
 my_function()
+
+# x = first_function(my_function)
+# x()
