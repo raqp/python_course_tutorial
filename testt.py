@@ -1,9 +1,21 @@
-class A:
+class Series:
 
-    def my_function(self):
-        self.name = "John"
+    def __init__(self, start, stop):
+        self.current = start
+        self.high = stop
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current >= self.high:
+            raise StopIteration
+        else:
+            self.current += 1
+            return self.current - 1
 
 
-a = A()
-a.my_function()
-print(a.name)
+custom_iterator = Series(1, 4)
+
+for i in custom_iterator:
+    print(i)
